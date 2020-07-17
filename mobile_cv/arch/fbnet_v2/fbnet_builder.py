@@ -201,6 +201,7 @@ def parse_block_cfgs(block_cfgs):
     """
     assert isinstance(block_cfgs, list)
     ret = []
+    import ipdb; ipdb.set_trace()
     for stage_cfg in block_cfgs:
         cur_stage = []
         for block_cfg in stage_cfg:

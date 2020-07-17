@@ -115,6 +115,7 @@ class ClsConvHead(nn.Module):
 
 class FBNetBackbone(nn.Module):
     def __init__(self, arch_name, dim_in=3):
+        import ipdb; ipdb.set_trace()
         super().__init__()
 
         builder, arch_def = _create_builder(arch_name)
@@ -125,6 +126,7 @@ class FBNetBackbone(nn.Module):
         self.arch_def = arch_def
 
     def forward(self, x):
+        import ipdb; ipdb.set_trace()
         y = self.stages(x)
         if self.dropout is not None:
             y = self.dropout(y)
